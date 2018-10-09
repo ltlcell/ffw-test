@@ -74,7 +74,7 @@ class MoviePage extends Component {
               />
             </div>
             <div className="filter__button-container">
-              {localStorage.movie_db_favorites === undefined ? (null) : <button className="filter__button" onClick={() => this.props.dispatch(showFavoriteMovies())}>View Favorites</button>}
+              {!localStorage.movie_db_favorites || JSON.parse(localStorage.movie_db_favorites).movieId === "" ? (null) : <button className="filter__button" onClick={() => this.props.dispatch(showFavoriteMovies())}>View Favorites</button>}
             </div>
           </div>
 

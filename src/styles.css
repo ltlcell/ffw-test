@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.favorites--page {
+  text-align: right;
+}
+
+.movie-page {
+  margin: 0 auto;
+  padding: 0 12px;
+  width: 960px;
+}
+
+.movie-page .movie__favorites-star {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 40px;
+  height: 38px;
+  padding: 20px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.movie-page .movie--not-favorite {
+  background: url(./images/empty-star.png) no-repeat;
+}
+
+.movie-page .movie--favorite {
+  background: url(./images/full-star.png) no-repeat;
+}
+
+.movie-page .filter__button {
+  display: inline-block;
+  margin: 20px 0;
+  border: 1px solid #382457;
+  padding: 5px 40px;
+  min-width: 200px;
+  background: #170f24;
+  color: #d2ced9;
+  text-align: center;
+  cursor: pointer;
+}
+
+.movie-page .filter__button + .filter__button {
+  margin-left: 20px;
+}
+
+.movie-page .filters-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+}
+
+.movie-page .filters-container .filter__button {
+  display: inline-block;
+  margin: 20px 0;
+  border: 1px solid #382457;
+  padding: 5px 40px;
+  min-width: 200px;
+  background: #170f24;
+  color: #d2ced9;
+  text-align: center;
+  cursor: pointer;
+}
+
+.movie-page .filters-container .filter__button + .filter__button {
+  margin-left: 20px;
+}
+
+.movie-page .filters-container .filter__button-container {
+  text-align: right;
+}
+
+.movie-page .movie__elements {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+}
+
+.movie-page .movie__elements .movie__box {
+  position: relative;
+  cursor: pointer;
+}
+
+.movie-page .movie__elements .movie__box:hover span {
+  display: block;
+}
+
+.movie-page .movie__elements .movie__box img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.movie-page .movie__elements .movie__box span {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background: #170f24;
+  color: #d2ced9;
+  text-align: center;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.movie-page .movie__background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(23, 15, 36, 0.6);
+}
+
+.movie-page .movie__background .movie__card {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
+  background: #170f24;
+  color: #d2ced9;
+}
+
+.movie-page .movie__background .movie__card .movie__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background: url(./images/close-btn.png) no-repeat;
+  cursor: pointer;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.movie-page .movie__background .movie__card .movie__close-btn:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.movie-page .movie__background .movie__card .movie__header {
+  margin: 20px;
+  text-align: center;
+}
+
+.movie-page .movie__background .movie__card .movie__overview {
+  margin: 20px;
+  text-align: center;
+}
+
+.movie-page .movie__background .movie__card .movie__genre-names {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.movie-page .movie__background .movie__card .movie__genre-names b {
+  color: #78609a;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.movie-page .movie__background .movie__card .movie__recommended {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+  margin: 60px 0;
+  text-align: center;
+}
+
+.movie-page .movie__background .movie__card .movie__recommended img {
+  display: inline-block;
+  max-width: 200px;
+  cursor: pointer;
+}
+
+.movie-page .search-input {
+  margin: 20px 0;
+  padding: 5px 10px;
+  min-width: 400px;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,186 @@
+$primary-color: #170f24;
+$secondary-color: #d2ced9;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.favorites--page{
+    text-align: right;        
+}
+
+.movie-page{
+    margin: 0 auto;
+    padding: 0 12px;
+    width: 960px;
+
+    .movie__favorites-star{
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 40px;
+        height: 38px;
+        padding: 20px;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+    } 
+    .movie--not-favorite{
+        background: url(./images/empty-star.png) no-repeat;
+    }
+    .movie--favorite{
+        background: url(./images/full-star.png) no-repeat;
+    }
+
+    .filter__button{
+        display: inline-block;
+        margin: 20px 0;
+        border: 1px solid #382457;
+        padding: 5px 40px;
+        min-width: 200px;
+        background: #170f24;
+        color: $secondary-color;
+        text-align: center;
+        cursor: pointer;
+
+        + .filter__button{
+            margin-left: 20px;
+        }
+    }
+
+    .filters-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+        row-gap: 30px;
+
+        .filter__button{
+            display: inline-block;
+            margin: 20px 0;
+            border: 1px solid #382457;
+            padding: 5px 40px;
+            min-width: 200px;
+            background: #170f24;
+            color: $secondary-color;
+            text-align: center;
+            cursor: pointer;
+
+            + .filter__button{
+                margin-left: 20px;
+            }
+        }
+
+        .filter__button-container{
+            text-align: right;
+        }        
+    }
+
+    .movie__elements{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 30px;
+        row-gap: 30px;
+
+        .movie__box{
+            position: relative;    
+            cursor: pointer;
+            &:hover span{
+                display: block;
+            }
+            img{
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+            span{
+                display: none;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                padding: 20px;
+                background: $primary-color;
+                color: $secondary-color;
+                text-align: center;
+                transition: all .2s ease-in-out;               
+            }            
+          }
+    }
+    .movie__background{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(23, 15, 36, 0.6);
+
+        .movie__card{
+            position: fixed;
+            top: 10%;
+            left: 0;
+            right: 0;
+            width: 80%;
+            margin: 0 auto;
+            background: $primary-color;
+            color: $secondary-color;
+
+            .movie__close-btn{
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 30px;
+                height: 30px;
+                background: url(./images/close-btn.png) no-repeat;
+                cursor: pointer;
+                transition: all .1s ease-in-out;
+                &:hover{
+                    transform: rotate(360deg)
+                }
+            }
+
+            .movie__header{
+                margin: 20px;
+                text-align: center;
+            }
+
+            .movie__overview{
+                margin: 20px;
+                text-align: center;
+            }
+
+            .movie__genre-names{
+                margin: 0 auto;
+                text-align: center;
+
+                b{
+                    color: #78609a;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+            }
+            .movie__recommended{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 30px;
+                row-gap: 30px;
+                margin: 60px 0;
+                text-align: center;
+
+                img{
+                    display: inline-block;
+                    max-width: 200px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+    .search-input{
+        margin: 20px 0;
+        padding: 5px 10px;
+        min-width: 400px;
+    }
+}
